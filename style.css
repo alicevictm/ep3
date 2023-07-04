@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(143, 97, 97);
+    display: grid;
+    grid-template-areas: 
+        "cab cab cab"
+        "sec pri pri"
+        "rod rod rod";
+    grid-gap: 3px;
+    grid-template-columns: 20% auto auto;
+    grid-template-rows: auto 1000px auto;
+    width: 1300px;
+    border: 2px solid rgb(255, 255, 255);
+    margin: 0 auto;
+    padding: 5px 5px 5px 5px;
+}
+
+header{
+    grid-area: cab;
+    display: flex;
+    padding: 1rem;
+    border: solid rgb(128, 89, 89)
+}
+
+.logo{
+    max-width:8rem;
+    max-height: 10rem;
+    border-radius: 100%;
+}
+
+aside{
+    grid-area: sec;
+}
+
+main{
+    grid-area: pri;
+}
+
+.elemento_pai{
+    border: 2px rgb(128, 89, 89);  
+    display: flex;
+    justify-content: center;
+    width: 1300px;
+    padding: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 100vh;
+}
+.card{
+    border-radius: 40px;
+    padding: 30px;
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+    transition: 0.7s;
+    background-color: rgba(128, 89, 89);
+    color: rgb(255, 183, 183);
+}
+
+.card:hover{
+    background-color: rgb(128, 89, 89);
+    color: rgb(255, 252, 252);
+}
+.card:hover a{
+    background-color: rgb(255, 183, 183);
+    color: rgb(255, 251, 251);
+}
+
+.texto a{
+    display: block;
+    padding: 20px 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(128, 89, 89);
+    border-radius: 100px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.texto a:hover{
+    background-color: rgb(249, 249, 249);
+}
+
+.produtos{
+    max-width: 15rem;
+    max-height: 15rem;
+}
+
+footer{
+    grid-area: rod;
+}
+
+header, aside, main, footer{
+    background-color: rgb(255, 183, 183);
+}
+
+p, li {
+    font-size: 20px;
+    line-height: 2;
+    letter-spacing: 0,3px;
+}
+
+.i-header{
+    max-width: 5rem;
+    max-height: 5rem;
+    border-radius: 100%;
+}
