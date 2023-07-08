@@ -1,35 +1,32 @@
-*{
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body{
-    background-color: rgb(143, 97, 97);
-    display: grid;
-    grid-template-areas: 
-        "cab cab cab"
-        "sec pri pri"
-        "rod rod rod";
-    grid-gap: 3px;
-    grid-template-columns: 20% auto auto;
-    grid-template-rows: auto 1000px auto;
-    width: 1300px;
-    border: 2px solid rgb(255, 255, 255);
-    margin: 0 auto;
-    padding: 5px 5px 5px 5px;
-}
-
 header{
     grid-area: cab;
     display: flex;
     padding: 1rem;
-    border: solid rgb(128, 89, 89)
+    border: solid rgb(128, 89, 89);
 }
 
 .logo{
-    max-width:8rem;
+    max-width:10rem;
     max-height: 10rem;
     border-radius: 100%;
+}
+
+body{
+    background-color: rgb(143, 97, 97);
+    border: 2px solid rgb(255, 255, 255);
+    display: grid;
+    grid-template-areas: 
+    "cab cab cab"
+    "sec pri pri"
+    "rod rod rod";
+    grid-gap: 3px;
+    grid-template-columns: 20% auto auto;
+    grid-template-rows: auto 2000px auto;
+    margin: 0 auto;
+    justify-content: center;
+    min-height: 100vh;
+    width: 1400px;
+    padding: 5px 5px 5px 5px;
 }
 
 aside{
@@ -40,27 +37,35 @@ main{
     grid-area: pri;
 }
 
-.elemento_pai{
-    border: 2px rgb(128, 89, 89);  
-    display: flex;
-    justify-content: center;
-    width: 1300px;
-    padding: 10px;
-    flex-wrap: wrap;
-    align-items: center;
-    min-height: 100vh;
-}
-.card{
-    border-radius: 40px;
-    padding: 30px;
-    width: 300px;
-    margin: 10px;
-    text-align: center;
-    transition: 0.7s;
-    background-color: rgba(128, 89, 89);
-    color: rgb(255, 183, 183);
+header, aside, main, footer{
+    background-color: rgb(255, 183, 183);
 }
 
+.cards{
+    display: grid;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    max-width: 710px;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+}
+
+.card{
+    display: flex;
+    background-color: rgba(128, 89, 89);
+    color: rgb(255, 183, 183);
+    border: 2px rgb(128, 89, 89);
+    width: 300px;
+    border-radius: 40px;
+    padding: 10px;
+    width: 300px;
+    margin: 10px;
+    transition: 0.7s;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 .card:hover{
     background-color: rgb(128, 89, 89);
     color: rgb(255, 252, 252);
@@ -70,30 +75,45 @@ main{
     color: rgb(255, 251, 251);
 }
 
-.texto a{
+.produtos{
     display: block;
-    padding: 20px 10px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(128, 89, 89);
-    border-radius: 100px;
-    text-decoration: none;
-    transition: 0.5s;
-}
-.texto a:hover{
-    background-color: rgb(249, 249, 249);
+    height: auto;
+    width: 230px;
+    border-radius: 30px;
+    margin: 0px auto;
 }
 
-.produtos{
-    max-width: 15rem;
-    max-height: 15rem;
+.texto{
+    line-height: 1;
+    font-size: 1.5rem;
+    padding: 7px;
+}
+
+.texto > p:first-of-type{
+    margin-top: 0;
+}
+
+.valor{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(200, 93, 93);
+    font-size: 1em;
+    padding: 7px;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+.valor:hover{
+    background-color: rgb(200, 93, 93);
+    text-decoration: none;
+}
+.h2{
+    color: rgb(200, 93, 93);
 }
 
 footer{
     grid-area: rod;
-}
-
-header, aside, main, footer{
-    background-color: rgb(255, 183, 183);
 }
 
 p, li {
@@ -106,4 +126,20 @@ p, li {
     max-width: 5rem;
     max-height: 5rem;
     border-radius: 100%;
+}
+
+.titulo{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(128, 89, 89);
+    color: rgb(255, 251, 251);
+    font-size: 50px;
+    padding: 15px;
+}
+
+.apresentacao{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color:rgb(128, 89, 89);
+    font-size: 30px;
 }
