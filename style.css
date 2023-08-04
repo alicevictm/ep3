@@ -19,12 +19,12 @@ body{
     "rod rod rod";
     grid-gap: 3px;
     grid-template-columns: 20% auto auto;
-    grid-template-rows: auto 2000px auto;
+    grid-template-rows: auto 2100px auto;
     margin: 0 auto;
     justify-content: center;
     box-sizing: border-box;
     min-height: 100vh;
-    width: 1400px;
+    width: 1380px;
     padding: 5px 5px 5px 5px;
 }
 
@@ -47,9 +47,9 @@ header, aside, main, footer{
     display: grid;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     max-width: 710px;
-    margin: 0 auto;
+    margin: 20px auto;
     gap: 20px;
-    padding: 30px;
+    padding: 15px;
     grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
     font-size: 1rem;
 }
@@ -58,12 +58,12 @@ header, aside, main, footer{
     display: flex;
     background-color: rgba(128, 89, 89);
     color: rgb(255, 183, 183);
-    border: 2px rgb(128, 89, 89);
+    border: 1px rgb(128, 89, 89);
     width: 300px;
     border-radius: 40px;
     padding: 10px;
     width: 300px;
-    margin: 10px;
+    margin: 20px;
     transition: 0.7s;
     text-align: center;
     flex-wrap: wrap;
@@ -114,17 +114,17 @@ header, aside, main, footer{
 
 .lista a:hover{
     color:rgb(255, 255, 255);
-    border-color: rgb(143, 97, 97);
+    border-color: rgb(128, 89, 89);
     border-style:double;
     border-width: 0 0 4px 0;
     transition: 0.2s;
 }
 
 .texto{
-    line-height: 0.5px;
+    line-height: 5px;
     font-size: 1.3rem;
     padding: 1px;
-    color: rgb(219, 169, 169)
+    color: rgb(68, 50, 50);
 }
 
 .texto > p:first-of-type{
@@ -138,13 +138,14 @@ header, aside, main, footer{
     background-color: rgb(255, 255, 255);
     color: rgb(200, 93, 93);
     font-size: 1em;
-    padding: 7px;
+    padding: 10px;
     border-radius: 100px;
     transition: 0.5s;
 }
 .valor:hover{
     background-color: rgb(200, 93, 93);
     text-decoration: none;
+    font-size: 1.2em;
 }
 
 footer{
@@ -171,10 +172,32 @@ p, li {
     font-size: 50px;
     padding: 15px;
 }
+.titulo:hover{
+    color: rgb(143, 97, 97);;
+    text-shadow: rgb(68, 50, 50); 
+    border-color: rgb(255, 251, 251);
+    border-style: double;
+    border-width: 0 0 4px 0;
+    font-size: 52px;
+    transition: 1s;
+}
 
 .apresentacao{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     color:rgb(128, 89, 89);
     font-size: 30px;
+}
+
+.agradecimentos{
+    max-width: 7rem;
+    max-height: 7rem;
+    border-radius: 40%;
+}
+
+.obrigada{
+    font-size: 1.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(128, 89, 89);
+    text-align: right;
 }
