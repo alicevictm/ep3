@@ -244,9 +244,15 @@ img, p {
     "sec pri pri"
     "rod rod rod";
     grid-gap: 3px;
-    grid-template-rows: auto 1000px auto;
     justify-content: center;
-    width: 1380px;
+    grid-template-columns: 20% 60% auto;
+    grid-template-rows: auto auto auto;
+    margin: 0 auto;
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: 180vh;
+    width: 80%;
+    padding: 5px 5px 5px 5px;
 }
 
 .content{
