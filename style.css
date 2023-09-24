@@ -1,51 +1,62 @@
-header, aside, main, footer{
-    background-color: rgb(255, 183, 183);
-    padding: 2rem;
-    border: solid rgb(128, 89, 89);
+@media (max-width: 768px) {
+    /* Estilos para telas menores, como smartphones */
+}
+  
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Estilos para tablets */
+}
+  
+@media (min-width: 1025px) {
+    /* Estilos para telas maiores, como desktops */
+}
+
+header, aside, main, footer{ /* O código CSS será aplicado a todos os elementos header, aside, main e footer na página.*/
+    background-color: rgb(255, 183, 183); /* define a cor de fundo para esses elementos */
+    padding: 2rem; /* O preenchimento interno cria espaço entre o conteúdo dentro desses elementos e suas bordas. */
+    border: solid rgb(128, 89, 89); /* A borda será sólida (não pontilhada ou tracejada) e terá a mesma largura em todos os lados do elemento. */
 }
 
 header{
-    grid-area: cab;
-    display: flex;
+    grid-area: cab; /* Esta linha atribui ao elemento header uma área de grade chamada "cab". Isso sugere que o elemento header será posicionado dentro de um layout de grade CSS maior que usa essa área de grade "cab" */
+    display: flex; /* Com display: flex;, você pode alinhar, distribuir e ajustar o espaço entre os elementos filhos do header de maneira mais eficaz. */
 }
 
 .logo{
-    max-width:10rem;
-    max-height: 10rem;
-    border-radius: 100%;
+    max-width: 10rem; /* Isso é útil para garantir que a imagem do logotipo não fique muito larga e distorcida em tamanhos de tela maiores. */
+    max-height: 10rem; /* Isso impede que a imagem do logotipo fique muito alta e desproporcional em relação à largura. */
+    border-radius: 100%; /* Isso cria um efeito de borda arredondada, transformando efetivamente o elemento em um círculo. */
 }
 
 .início{
-    font-size: 1px;
-    margin: 2rem;
-    text-align: center;
-    letter-spacing: 0.1px;
-    text-decoration: none;
+    font-size: 1px; /* Esta linha define o tamanho da fonte para elementos com a classe .início como 1 pixel. */
+    margin: 2rem; /*  A margem cria espaço ao redor do elemento. */ 
+    text-align: center; /* Esta linha centraliza o texto dentro dos elementos .início. Isso significa que o texto será alinhado horizontalmente no centro do elemento. */
+    letter-spacing: 0.1px; /* Isso pode ser usado para ajustar o espaçamento entre letras para fins de design.*/
+    text-decoration: none; /* Geralmente, isso é usado para remover sublinhados de links que não devem se parecer com links clicáveis.*/
 }
 .lista{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /*Esta regra define a família de fontes para os elementos afetados. */
     font-size: 18px;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-weight: 700;/* Isso tornará o texto mais espesso ou em negrito.*/
+    text-transform: uppercase; /* nsforma todo o texto nos elementos em letras maiúsculas.*/
     padding: 5px 5px;
-    display: inline;
-    align-items: center;
+    display: inline; /*Isso faz com que eles se comportem como parte do fluxo de texto normal, permitindo que outros elementos ou texto fiquem ao lado deles na mesma linha */
     margin: 7.5rem;
 }
 .lista .link-início{
-    color:rgb(128, 89, 89);
-    padding-left: 20px;
-    padding-right: 20px;
+    color:rgb(128, 89, 89); /* Esta linha define a cor do texto ou link */
+    padding-left: 20px; /*O preenchimento cria espaço dentro do elemento entre o conteúdo e a borda esquerda.*/
+    padding-right: 20px; /*O preenchimento cria espaço dentro do elemento entre o conteúdo e a borda direita.*/
     text-decoration: none;
     padding: 10px 1px;
-    line-height: 100px;
+    line-height: 100px; /*A altura da linha controla o espaçamento vertical entre as linhas de texto dentro do elemento. */
 }
 .início a:hover{
     color:rgb(255, 255, 255);
     border-color: rgb(128, 89, 89);
-    border-style:double;
+    border-style:double; /*Define o estilo da borda como "double", que é uma linha dupla. Isso significa que a borda terá duas linhas paralelas.*/
     border-width: 0 0 4px 0;
-    transition: 0.2s;
+    transition: 0.2s; /*Esta regra define uma transição suave com uma duração de 0,2 segundos.*/
 }
 .início .link{ 
     color:rgb(128, 89, 89);
@@ -59,25 +70,24 @@ header{
 body{
     background-color: rgb(143, 97, 97);
     border: 2px solid rgb(255, 255, 255);
-    display: grid;
-    grid-template-areas: 
+    display: grid; /*. Isso permite que você crie layouts complexos usando um sistema de grade CSS.*/
+    grid-template-areas:  /*Esta propriedade define as áreas da grade e como os elementos devem ser distribuídos dentro delas. Você está criando três áreas: "cab" (cabeçalho), "sec" (conteúdo secundário) e "rod" (rodapé). As áreas estão organizadas em três linhas e três colunas.*/
     "cab cab cab"
     "sec pri pri"
     "rod rod rod";
-    grid-gap: 3px;
-    grid-template-columns: 20% auto auto;
-    grid-template-rows: auto 3300px auto;
+    grid-gap: 3px; /*Isso cria espaço entre os elementos dentro da grade.*/
+    grid-template-columns: 20% auto auto; /*Isso cria espaço entre os elementos dentro da grade.*/
+    grid-template-rows: auto 3300px auto; /*Define o tamanho das linhas na grade.*/
     margin: 0 auto;
-    justify-content: center;
-    box-sizing: border-box;
-    min-height: 100vh;
+    justify-content: center; /*isso centraliza o conteúdo dentro do contêiner horizontalmente.*/
+    box-sizing: border-box; /* Isso significa que o tamanho total do elemento incluirá a borda e o preenchimento, em vez de adicionar o preenchimento e a borda ao tamanho especificado.*/
+    min-height: 100vh; /* Isso garante que o contêiner tenha pelo menos a altura da tela inteira.*/
     width: 1380px;
-    padding: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px; /*Define a largura do contêiner */
 }
 
 aside{
     grid-area: sec;
-
 }
 
 main{
@@ -87,7 +97,7 @@ main{
 .titulo{
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: center;
-    text-shadow: 2px 2px 2px rgba(128, 89, 89);
+    text-shadow: 2px 2px 2px rgba(128, 89, 89);/*, é usada para adicionar sombras de texto a um elemento de texto.*/
     color: rgb(255, 251, 251);
     font-size: 50px;
     padding: 15px;
@@ -111,8 +121,8 @@ main{
 p, li {
     font-size: 20px;
     line-height: 2;
-    letter-spacing: 0,3px;
-    padding-bottom: 3px;
+    letter-spacing: 0.3px;/*é usada para ajustar o espaçamento entre as letras (ou caracteres) em um elemento de texto. */
+    padding-bottom: 3px; /*é usada para definir o preenchimento (espaço) na parte inferior de um elemento. */
 }
 
 .cards{
@@ -138,8 +148,8 @@ p, li {
     margin: 20px;
     transition: 0.7s;
     text-align: center;
-    flex-wrap: wrap;
-    flex-direction: column;
+    flex-wrap: wrap; /*Essa propriedade define o comportamento de quebra de linha dos itens flexíveis dentro do contêiner flex. Quando definida como wrap, os itens flexíveis são dispostos em várias linhas (ou colunas, dependendo da direção principal) à medida que o espaço disponível se esgota. Isso significa que, se houver mais itens flexíveis do que o contêiner pode acomodar em uma única linha (ou coluna), eles serão distribuídos em linhas (ou colunas) adicionais.*/
+    flex-direction: column; /*Essa propriedade define a direção principal do contêiner flex. Quando definida como column, os itens flexíveis são empilhados verticalmente. Isso significa que os itens flexíveis fluem de cima para baixo dentro do contêiner, em vez de serem dispostos horizontalmente em uma única linha. A direção principal pode ser row (padrão), que coloca os itens flexíveis em uma única linha horizontal, ou column, que coloca os itens em uma única coluna vertical.*/
 }
 .card:hover{
     background-color:rgb(128, 89, 89);
@@ -196,20 +206,29 @@ footer{
 }
 
 .agradecimentos{
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(255, 183, 183);
+    display: flex;
+    padding-top: 1px;
+    padding-left: 10px;
+    text-align: center;
     max-width: 10rem;
     max-height: 10rem;
     border-radius: 40%;
+    float: left;
+    display: flex;
+    max-width: 150px;
 }
 
 .obrigada{
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(128, 89, 89);
-    padding-left: 170px;
-}
-
-img, p {
-    float:left;
+    display: flex;
+    padding-top: 1px;
+    padding-left: 180px;
+    text-align: center;
 }
 
 .insta{
@@ -263,7 +282,6 @@ img, p {
 h1{
     font-size: 40px;
     color: rgb(200, 93, 93);
-    padding: 2px 0 10px 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
     text-align: center;
@@ -275,6 +293,7 @@ h1{
 
 p{
     margin-bottom: 1px;
+    float: left;
 }
 
 label{
@@ -416,4 +435,214 @@ input[type="submit"]:hover{
     padding-right: 0px;
     margin: 10px;
     text-decoration: none;
+}
+
+.body-produtos{
+    background-color: rgb(255, 183, 183);
+    border: 2px solid rgb(255, 255, 255);
+    display: grid;
+    grid-template-areas: 
+    "cab cab cab"
+    "sec pri pri"
+    "rod rod rod";
+    grid-gap: 3px;
+    grid-template-rows: auto 500px auto;
+    justify-content: center;
+    width: 1000px;
+}
+
+.header-produtos{
+    background-color: rgb(128, 89, 89);
+    padding: 2rem;
+    border: solid rgb(68, 50, 50);
+    grid-area: cab;
+    display: flex;
+    width: 920px;
+    max-height: 200px;
+    line-height: 0px;
+}
+
+.footer-produtos{
+    background-color: rgb(128, 89, 89);
+    padding: 2rem;
+    border: solid rgb(68, 50, 50); 
+    grid-area: rod;
+}
+
+.tit-produtos{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgb(41, 32, 32);
+    color: rgb(143, 97, 97);
+    font-size: 50px;
+    border-style: none;
+    padding-left: 80px;
+    display: inline;
+}
+.tit-produtos:hover{
+    color: rgb(200, 93, 93);
+    text-shadow: rgb(255, 251, 251);
+    font-size: 52px;
+    transition: 1s;
+}
+
+.aside-produtos{
+    background-color: rgb(255, 183, 183);
+    padding: 2rem;
+    border: solid rgb(128, 89, 89);
+    grid-area: sec;
+}
+
+.main-produtos{
+    grid-area: pri;
+    background-color: rgb(255, 183, 183);
+    padding: 1rem;
+    border: solid rgb(128, 89, 89);
+}
+
+.botaoprodutos{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    background-color: rgb(68, 50, 50);
+    color: rgb(255, 251, 251);
+    font-size: 1em;
+    padding: 10px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    border-radius: 100px;
+    transition: 0.5s;
+    width: 320px;
+}
+
+.botaoprodutos:hover{
+    background-color: rgb(255, 251, 251);
+    color: rgb(200, 93, 93);
+    text-decoration: none;
+    font-size: 1.1em;
+    width: 320px;
+}
+
+.card-produtos:hover a{
+    background-color: rgb(255, 251, 251);
+    color: rgb(200, 93, 93);
+}
+
+.card-produtos:hover{
+    background-color:rgb(128, 89, 89);
+    color: rgb(255, 252, 252);
+}
+
+.cards-produtos{
+    display: grid;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    max-width: 350px;
+    margin: 5px auto;
+    gap: 10px;
+    padding: 1px;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    font-size: 1rem;
+    float: left;
+}
+
+.card-produtos{
+    display: flex;
+    background-color: rgb(143, 97, 97);
+    color: rgb(255, 183, 183);
+    border: 1px rgb(128, 89, 89);
+    border-radius: 40px;
+    padding: 10px;
+    width: 300px;
+    margin: 20px;
+    transition: 0.7s;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.descricaodetalhada{
+   color: rgb(143, 97, 97);
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   display: flex;
+   padding: 1px;
+   text-align: justify;
+   max-width: 350px;
+}
+
+.asideitens{
+    text-decoration: none;
+    font-size: 1.2em;
+    color: rgb(200, 93, 93);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    border-color: rgb(128, 89, 89);
+    border-style: dotted;
+    border-width: 0 0 2px 0;
+}
+
+.asideindex{
+    font-size: 1.3em;
+    color: rgb(200, 93, 93);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    text-decoration: none;
+    border-color: rgb(128, 89, 89);
+    border-style: dotted;
+    border-width: 0 0 2px 0;
+}
+
+.asideindex:hover{
+    transition: 0.6s;
+    color: rgb(255, 251, 251);
+    border-style: none;
+}
+
+.asideitens:hover{
+    transition: 0.6s;
+    color: rgb(255, 251, 251);
+    border-style: none;
+}
+
+.endereço{
+    font-size: 1.2em;
+    color: rgb(200, 93, 93);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    text-decoration: none;
+    border-color: rgb(128, 89, 89);
+    border-style: dotted;
+    border-width: 0 0 2px 0;
+}
+
+.obrigada-produtos{
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(255, 183, 183);
+    display: flex;
+    padding-top: 1px;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.agradecimentos-produtos{
+    max-width: 10rem;
+    max-height: 10rem;
+    border-radius: 40%;
+    float: left; /*é usada para fazer com que um elemento flutue para a esquerda dentro de seu contêiner. Isso é frequentemente usado para criar layouts de várias colunas ou para fazer com que um elemento fique ao lado de outro elemento, em vez de abaixo dele.*/
+    display: flex;
+    max-width: 110px;
+}
+
+.insta-produtos{
+    color: rgb(200, 93, 93);
+    text-decoration: none;
+    text-align: justify;
+    font-size: 35px;
+    line-height: 1px;
+}
+
+.insta-.produtos:hover{
+    color: rgb(255, 255, 255);
+    font-size: 37px;
+    transition: 0.5s;
 }
